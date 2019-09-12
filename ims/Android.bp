@@ -1,21 +1,28 @@
 
-
 java_library {
-    name: "telephony-ext",
+    name: "ims-ext-common",
     installable: true,
 
     aidl: {
         local_include_dirs: ["src/org"],
+        include_dirs: [
+            "frameworks/native/aidl/gui",
+        ],
     },
     srcs: [
         "src/org/**/*.java",
         "src/org/**/I*.aidl",
         "src/org/**/*.logtags",
     ],
+    product_specific: true,
 
-    platform_apis: true,
-    //LOCAL_SDK_VERSION := system_current
+}
 
+prebuilt_etc {
+    name: "ims_ext_common.xml",
+    src: "ims_ext_common.xml",
+    sub_dir: "permissions",
+    product_specific: true,
 }
 
 // Include subdirectory makefiles
