@@ -2,7 +2,6 @@
 
 java_library {
     name: "telephony-ext",
-    owner: "qcom",
     installable: true,
 
     aidl: {

@@ -2,7 +2,6 @@
 
 android_app {
     name: "ConfURIDialer",
-    owner: "qcom",
 
     srcs: ["**/*.java"],
 
